@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="assets/Shivani_PHOTO.png" alt="Shivani photo" width="140" style="border-radius:16px;" />
+  <img src="Shivani_PHOTO.png" alt="Shivani photo" width="140" style="border-radius:16px;" />
 </p>
 
 <h1 align="center">Hi, I'm <span style="color:#7c3aed">Shivani Dasari</span> 👋</h1>
