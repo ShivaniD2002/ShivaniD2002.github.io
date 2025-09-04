@@ -1,5 +1,5 @@
 
-<p align="center">
+<p align="left">
   <img src="Shivani_PHOTO.png" alt="Shivani photo" width="140" style="border-radius:16px;" />
 </p>
 
@@ -47,7 +47,7 @@
 
 **Visualization**: Power BI · Tableau
 
-**Productivity Tools**: Microsoft Office 365s
+**Productivity Tools**: Microsoft Office 365
 
 <p>
   <!-- Devicon logos -->
