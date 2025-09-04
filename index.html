@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shivani Dasari · Data Science & Software Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Skill icons (Devicon) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <style>
+    :root{
+      --bg1: #070a1a;
+      --bg2: #0d0f24;
+      --card: #111633;
+      --ink: #f6fbff;
+      --muted: #b7c4de;
+      --c1: #7c3aed;   /* violet */
+      --c2: #2563eb;   /* blue */
+      --c3: #06b6d4;   /* cyan */
+      --c4: #22c55e;   /* green */
+      --c5: #f59e0b;   /* amber */
+      --c6: #ef4444;   /* red */
+      --pill: #18224d;
+      --border: #243167;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(120deg,var(--bg1),var(--bg2));color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
+    body:before{
+      content:"";position:fixed;inset:-20%;pointer-events:none;filter:blur(110px) saturate(140%);
+      background:radial-gradient(40% 35% at 20% 30%, rgba(124,58,237,.25), transparent 60%),
+                 radial-gradient(40% 35% at 80% 20%, rgba(37,99,235,.25), transparent 60%),
+                 radial-gradient(40% 35% at 70% 80%, rgba(6,182,212,.22), transparent 60%),
+                 radial-gradient(40% 35% at 25% 85%, rgba(245,158,11,.18), transparent 60%);
+      z-index:-1;
+      animation: floatGlow 18s ease-in-out infinite alternate;
+    }
+    @keyframes floatGlow{from{transform:translateY(-2%)}to{transform:translateY(2%)}}
+    a{color:var(--ink);text-decoration:none}
+    a:hover{opacity:.9;text-decoration:underline}
+    .container{max-width:1080px;margin:0 auto;padding:32px 20px 80px}
+    header{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:center;margin-top:8px}
+    .avatar{width:140px;height:140px;border-radius:22px;object-fit:cover;border:2px solid var(--border);background:#0e1627;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    h1{font-size:48px;line-height:1.05;margin:0 0 6px;font-weight:900;letter-spacing:-0.02em;
+       background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--c4),var(--c5),var(--c6));
+       -webkit-background-clip:text;background-clip:text;color:transparent}
+    .subtitle{font-size:18px;color:var(--muted);margin-top:6px}
+    .contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#1a234e,#121a3b);
+          border:1px solid var(--border);padding:8px 12px;border-radius:999px;font-size:14px;color:var(--ink);
+          box-shadow:0 6px 18px rgba(37,99,235,.15)}
+    .chip i{font-style:normal;opacity:.95}
+    .chip.mail{background:linear-gradient(90deg,rgba(124,58,237,.25),rgba(37,99,235,.25));}
+    .chip.link{background:linear-gradient(90deg,rgba(37,99,235,.25),rgba(6,182,212,.25));}
+    .chip.phone{background:linear-gradient(90deg,rgba(34,197,94,.25),rgba(245,158,11,.25));}
+    section{margin-top:28px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0));
+      border:2px solid transparent;border-radius:20px;padding:24px;
+      background-clip:padding-box,border-box;position:relative;
+      box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .card:before{content:"";position:absolute;inset:-2px;border-radius:22px;z-index:-1;
+      background:linear-gradient(135deg,var(--c1),var(--c2),var(--c3),var(--c4));
+      opacity:.35;filter:saturate(120%)}
+    .grid{display:grid;gap:16px}
+    .grid.cols-2{grid-template-columns:1fr 1fr}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:880px){
+      header{grid-template-columns:1fr}
+      .avatar{width:112px;height:112px}
+      h1{font-size:38px}
+      .grid.cols-2,.grid.cols-3{grid-template-columns:1fr}
+    }
+    h2{font-size:22px;margin:0 0 14px;font-weight:800;letter-spacing:.02em;position:relative}
+    h2:after{content:"";display:block;height:3px;width:90px;margin-top:8px;border-radius:3px;
+      background:linear-gradient(90deg,var(--c2),var(--c3),transparent)}
+    h3{font-size:16px;margin:0 0 4px}
+    .muted{color:var(--muted)}
+    .pill{background:linear-gradient(90deg,rgba(37,99,235,.25),rgba(6,182,212,.25));
+      border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:13px;color:var(--ink)}
+    .stack{display:flex;flex-wrap:wrap;gap:8px}
+    .row{display:flex;gap:10px;align-items:center}
+    .icon{width:18px;height:18px;opacity:.9}
+    .list{display:grid;gap:16px}
+    .item{padding:16px;border-radius:16px;border:1px solid #1b2653;background:linear-gradient(180deg,#0f1733 0%, #0b122b 100%)}
+    .item h4{margin:0 0 6px;font-size:16px}
+    .item ul{margin:6px 0 0 18px}
+    .item ul li{margin:6px 0}
+    .skill-icons{display:flex;flex-wrap:wrap;gap:16px}
+    .skill-icons i{font-size:28px;filter:drop-shadow(0 6px 12px rgba(0,0,0,.35))}
+    footer{margin-top:40px;color:var(--muted);font-size:13px;text-align:center}
+    .cta{
+      margin-top:16px;display:inline-block;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));
+      padding:12px 16px;border-radius:12px;color:#0b1220;font-weight:800;box-shadow:0 10px 28px rgba(93,169,255,.35);
+      transform:translateY(0);transition:transform .2s ease}
+    .cta:hover{transform:translateY(-2px)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <img class="avatar" src="assets/Shivani_PHOTO.png" alt="Shivani profile photo" />
+      <div>
+        <h1>Shivani Dasari</h1>
+        <div class="subtitle">Data Science & Software Engineering · Application Development Associate @Accenture · Python · SQL · Cloud · Visualization</div>
+        <div class="contact">
+          <span class="chip mail"><i>📧 dshivani1121 @gmail.com</i></span>
+          <a class="chip link" href="https://www.linkedin.com/in/dasarishivani21" target="_blank"><i>🔗 linkedin.com/in/dasarishivani21</i></a>
+          <span class="chip phone"><i>📞 +44 790021 9504</i></span>
+        </div>
+        <a class="cta" href="#projects">View Featured Projects ↓</a>
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <section class="card" id="about">
+      <h2>Professional Summary</h2>
+      <p>
+        Data Science & Software Engineering professional with hands-on experience in Python, SQL, Java basics, cloud computing (AWS) and analytics. Proficient with data visualization (Power BI, Tableau) and analytics frameworks (Pandas, NumPy, MATLAB). Agile collaborator with strong problem-solving skills and certifications across Google/AWS/Python. Passionate about turning data into scalable, efficient, and impactful business solutions.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="grid cols-2">
+      <div class="card">
+        <h2>Technical Skills</h2>
+        <div class="skill-icons">
+          <i class="devicon-python-plain"></i>
+          <i class="devicon-java-plain"></i>
+          <i class="devicon-mysql-plain"></i>
+          <i class="devicon-react-original"></i>
+          <i class="devicon-html5-plain"></i>
+          <i class="devicon-css3-plain"></i>
+          <i class="devicon-git-plain"></i>
+          <i class="devicon-github-original"></i>
+          <i class="devicon-amazonwebservices-plain-wordmark"></i>
+          <i class="devicon-apacheairflow-plain"></i>
+          <i class="devicon-pandas-original"></i>
+          <i class="devicon-numpy-original"></i>
+          <i class="devicon-matlab-plain"></i>
+          <i class="devicon-snowflake-plain"></i>
+          <i class="devicon-tableau-plain"></i>
+          <i class="devicon-powerbi-plain"></i>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Certifications</h2>
+        <ul class="list">
+          <li>Google Data Analytics</li>
+          <li>AWS Data Analytics</li>
+          <li>Python for Data Science – Infosys</li>
+          <li>Data Analytics Virtual Internship – AWS Academy</li>
+          <li>MathWorks Machine Learning Onramp</li>
+          <li>MathWorks MATLAB Onramp</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="card" id="experience">
+      <h2>Professional Experience</h2>
+      <div class="list">
+        <div class="item">
+          <h4>Application Development Associate · Accenture Solutions Pvt Ltd</h4>
+          <div class="muted">Hyderabad, India · Jul 2024 – Apr 2025</div>
+          <ul>
+            <li>Designed, developed, and maintained software applications in Agile environment.</li>
+            <li>Enhanced application performance and integrated ML models.</li>
+            <li>Streamlined processes via efficient coding practices and optimizations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="card" id="projects">
+      <h2>Selected Projects</h2>
+      <div class="list">
+        <div class="item">
+          <h4>Prediction of Air Pollution</h4>
+          <ul>
+            <li>Built Random Forest and Linear Regression models (85%+ accuracy).</li>
+            <li>Performed feature engineering, imputation, and normalization.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h4>Automated Detection of Cardiac Arrhythmia</h4>
+          <ul>
+            <li>Implemented LSTM RNN for ECG time-series classification.</li>
+            <li>Preprocessed ECG signals (normalization, filtering, segmentation).</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h4>Education Analytics – Cloud-Based Dashboard (AWS)</h4>
+          <ul>
+            <li>Designed AWS architecture (S3, API Gateway, Lambda, RDS).</li>
+            <li>Built dashboards (Power BI/Tableau) for student performance.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="grid cols-2">
+      <div class="card">
+        <h2>Education</h2>
+        <div class="list">
+          <div class="item">
+            <h4>Master’s · Computer Science</h4>
+            <div class="muted">University of East London · May 2025 – pursuing</div>
+          </div>
+          <div class="item">
+            <h4>Bachelor’s · Computer Science & Data Science Engineering</h4>
+            <div class="muted">CMR Technical Campus · May 2020 – Apr 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Extras</h2>
+        <ul class="list">
+          <li>Open to internships and graduate roles in Data/Software Engineering.</li>
+          <li>Actively building projects and dashboards.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div>Designed with ♥ and shipped on GitHub Pages. © <span id="year"></span> Shivani Dasari</div>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
